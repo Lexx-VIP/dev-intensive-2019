@@ -59,7 +59,6 @@ fun Date.humanizeDiff(date:Date = Date(), date2:Date = Date()): String {
     } else {
         "более года назад"
     }
-
     return humanize
 }
 
