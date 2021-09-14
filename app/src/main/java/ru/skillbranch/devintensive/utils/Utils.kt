@@ -3,7 +3,7 @@ package ru.skillbranch.devintensive.utils
 object Utils {
     fun parseFullName(fullName:String?):Pair<String?, String?>{
 
-        val fullNameFix = if (fullName=="" || fullName==null) "John Doe" else fullName
+        val fullNameFix = if (fullName==null || fullName=="" || fullName==" ") "null null" else fullName
 
         val parts : List<String>? = fullNameFix?.split(" ")
 
