@@ -16,7 +16,6 @@ fun Date.format(pattern:String="HH:mm:ss dd.MM.yy"):String {
 
 fun Date.add(value: Int, units: TimeUnits = TimeUnits.SECOND) : Date{
     var time = this.time
-
     time +=when (units) {
         TimeUnits.SECOND -> value * SECOND
         TimeUnits.MINUTE -> value * MINUTE
@@ -36,15 +35,15 @@ fun Date.humanizeDiff(date:Date = Date(), date2:Date = Date()): String {
     val diff = millis2 - millis1
 
     val seconds = diff /1000
-    val minutes = diff / (60 * 1000)
+    val minutes = seconds / 60
     val hours = minutes / 60
     val days = hours / 24
 
-    val humanize = if (seconds <= 1) {
+    val humanize = if (seconds in 0..1) {
         "только что"
-    } else if (seconds <= 45) {
+    } else if (seconds in 1..45) {
         "несколько секунд назад"
-    } else if (seconds <= 75) {
+    } else if (seconds in 45..75) {
         "минуту назад"
     } else if (minutes <= 45) {
         "$minutes минут назад"
