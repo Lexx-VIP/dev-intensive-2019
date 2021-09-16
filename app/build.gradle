@@ -4,16 +4,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 29//вдруг поможет
-    buildToolsVersion "30.0.2"//вдруг поможет
-//    compileSdk 31
+    compileSdk 29//31
 
     defaultConfig {
         applicationId "ru.skillbranch.devintensive"
-//        minSdk 23
-//        targetSdk 31
-        minSdkVersion 23//вдруг поможет
-        targetSdkVersion 29//вдруг поможет
+        minSdk 23
+        targetSdk 29//31
         versionCode 1
         versionName "1.0"
     } //вдруг поможет
