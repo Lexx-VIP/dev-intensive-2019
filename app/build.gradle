@@ -9,7 +9,8 @@ android {
 
     defaultConfig {
         applicationId "ru.skillbranch.devintensive"
-        minSdk 23
+        minSdkVersion 23
+//        minSdk 23
         targetSdk 29//31
         versionCode 1
         versionName "1.0"
