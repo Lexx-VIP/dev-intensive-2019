@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
 //    id 'com.android.build.gradle.internal.dsl.BaseAppModuleExtension'
     id 'kotlin-android'
+    id 'kotlin-android-extensions' //вдруг поможет
 }
 
 android {
@@ -13,10 +14,13 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
+    } //вдруг поможет
 
-
+    buildTypes { //вдруг поможет
+        release { //вдруг поможет
+            minifyEnabled false //вдруг поможет
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        //}
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
