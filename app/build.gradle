@@ -4,22 +4,22 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
-//    compileSdk 31
+//    compileSdkVersion 31
+    compileSdk 31
 
     defaultConfig {
         applicationId "ru.skillbranch.devintensive"
-        minSdkVersion 23
-        targetSdkVersion 31
-//        minSdk 23
-//        targetSdk 31
+//        minSdkVersion 23
+//        targetSdkVersion 31
+        minSdk 23
+        targetSdk 31
         versionCode 1
         versionName "1.0"
     } //вдруг поможет
 
     buildTypes { //вдруг поможет
         release { //вдруг поможет
-            minifyEnabled false //вдруг поможет
+//            minifyEnabled false //вдруг поможет
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
